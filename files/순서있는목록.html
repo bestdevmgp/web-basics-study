@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상품 소개 페이지</title>
+    <style>
+        .a1{
+            font-family: '궁서체';
+            font-size: 50px;
+            font-style: italic;
+            font-weight: 900;
+            color: blue;
+            text-align: center;
+            text-shadow: 2pt 2pt 6pt red;
+            text-transform: uppercase;
+        }
+        .a2 {
+        font-family: "Song Myung", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 30px;
+        line-height: 23pt;
+        text-decoration: underline;
+        text-decoration: line-through;
+        }
+        .a3 {
+            letter-spacing: 5pt;
+        }
+        .a4 {
+            word-spacing: 5pt;
+        }
+        .a5{
+            font-size: 12pt;
+            line-height: 23pt;
+        }
+        ol{
+            list-style-type: circle;
+            list-style-position: inside;
+        }
+        table{
+            caption-side: bottom;
+            border:1px solid black;
+            /*border-collapse: collapse;*/
+            border-spacing: 5px 10pt;
+        }
+        td{
+            border: 1px solid black;
+        }
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Song+Myung&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1 class="a1">css적용하기</h1>
+    <h2 class="a2">레드향 샐러드 레시피</h2>
+    <p class="a3"><b>재료 : </b>레드향 1개, 아보카도 1개, 토마토 1개, 샐러드 채소 30g</p>
+    <p class="a4"><b>드레싱 : </b>올리브유 1큰술, 레몬즙 2큰술, 꿀 1큰술, 소금 약간</p>
+    <div class="a5">
+    <ol type="1" start="2">
+        <li>샐러드 채소를 씻고 물기를 제거한 후 준비합니다.</li>
+        <li>레드향과 아보카도, 토마토를 먹기 좋은 크기를 썰어둡니다.</li>
+        <li>드레싱 재료를 믹서에 갈아줍니다.</li>
+        <li>볼에 샐러드 채소와 썰어 둔 레드향, 아보카도, 토마토를 넣고 드레싱을 뿌리면 끝!</li>
+    </ol>
+</div>
+<table>
+    <caption>표 제목</caption>
+    <tr>
+        <td>내용</td>
+        <td>내용</td>
+        <td>내용</td>
+    </tr>
+</table>
+</body>
+</html>
+
+<!--
+    순서 있는 목록 만들기 : <ol> or <li>
+        li : list
+        ol : ordered list
+
+    type 속성 : 순서 목록의 숫자 조정
+    (1 : 숫자, a : 소문자, A : 대문자, i : 로마소문자, I : 로마대문자)
+
+    start 속성 : 목록의 시작 번호 수정
+-->

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>그라데이션</title>
+    <style>
+        div{
+            border: 1px solid black;
+            margin: 10px;
+            height: 100px;
+            width: 300px;
+        }
+
+        .b1{
+            background: linear-gradient(to right, #30cfd0, #330867);
+        }
+
+        .b2{
+            background: linear-gradient(to right bottom, skyblue, black);
+        }
+
+        .b3{
+            background: linear-gradient(150deg, pink, black);
+        }
+
+        .b4{
+            background: linear-gradient(45deg, red, black 40%, blue);
+        }
+
+        .b5{
+            background: linear-gradient(45deg, red, white 20%, blue, white 40%, skyblue, white 60%, yellow, white 80%, green);
+        }
+        .b6{
+            background: linear-gradient(to right, red, orange, yellow, green, blue, darkblue, purple);
+        }
+        .b7{
+            background: radial-gradient(circle at 30% 30%, red, white);
+        }
+        .b8{
+            background: radial-gradient(ellipse at top right, red, white 50%);
+        }
+        .b9{
+            background: radial-gradient(circle closest-side at 30% 50%, yellow, skyblue);
+        }
+        .b10{
+            background: radial-gradient(circle closest-corner at 30% 50%, yellow, skyblue);
+        }
+        .b11{
+            background: radial-gradient(circle farthest-corner at 30% 50%, yellow, skyblue);
+        }
+        .b12{
+            background: radial-gradient(circle farthest-side at 30% 50%, yellow, skyblue);
+        }
+        .b13{
+            background: repeating-radial-gradient(circle, white, gray 20px);
+        }
+        .b14{
+            background: repeating-linear-gradient(gray, white 20px);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="b1">b1</div>
+    <div class="b2">b2</div>
+    <div class="b3">b3</div>
+    <div class="b4">b4</div>
+    <div class="b5">b5</div>
+    <div class="b6">b6</div>
+    <div class="b7">b7</div>
+    <div class="b8">b8</div>
+    <div class="b9">b9</div>
+    <div class="b10">b10</div>
+    <div class="b11">b11</div>
+    <div class="b12">b12</div>
+    <div class="b13">b13</div>
+    <div class="b14">b14</div>
+</body>
+</html>

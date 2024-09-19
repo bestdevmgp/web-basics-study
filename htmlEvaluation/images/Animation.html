@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- saved from url=(0169)http://localhost:63342/%EC%9B%B9%EA%B8%B0/%EC%95%A0%EB%8B%88%EB%A9%94%EC%9D%B4%EC%85%98_%EC%98%88%EC%A0%9C.html?_ijt=to30hhqrcsfge40jk1k057c7e4&_ij_reload=RELOAD_ON_SAVE -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Animation</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            animation: color 1.5s infinite alternate, rotate 1.5s infinite;
+        }
+        @keyframes color {
+            from{background: red;}
+            50%{background: blue;}
+            to{background: green;}
+        }
+        @keyframes rotate {
+            from{}
+            50%{}
+            to{}
+        }
+        #box1{
+            animation: ro 3s alternate infinite;
+        }
+        @keyframes rotate{
+            from{
+                transform: perspective(200px) rotateX(0deg);
+            }
+            to{
+                transform: perspective(200px) rotateX(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="box1" class="box"></div>
+
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>

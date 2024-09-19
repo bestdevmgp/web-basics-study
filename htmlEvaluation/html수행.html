@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>대구로 떠나요~</title>
+</head>
+<body>
+    <h1>대구로 떠나요~</h1>
+    <h3>여행지</h3>
+    <ol>
+    <dl>
+        <li><dt><b>83타워</b></dt></li>
+        <dd>대구광역시 달서구 두류공원로 200 (두류동)에 있는 탑이다. 완공 시기는 1992년이며 대한민국에서 두 번째로 높은 탑이다.</dd>
+        <li><dt><b>김광석 다시그리기길</b></dt></li>
+        <dd>2010년 11월 20일 공개되었으며, 약 350 m의 길에 김광석의 삶과 노래를 주제로 한 다양한 벽화와 작품들이 들어서 많은 사람들이 찾는 명소가 되어 도시재생의 모범 사례로 언급되기도 한다.</dd>
+        <li><dt><b>송해공원</b></dt></li>
+        <dd>대구광역시 달성군 옥포읍 기세리에 있는 수변공원이다. 간경리와 용연사를 오고가는 길에 있으며, 원래 이 곳에 있던 저수지인 '옥연지'와 그 일대를 공원화한 거라서 '옥연지 송해공원'이라 불리기도 한다.</dd>
+        <li><dt><b>디아크문화관</b></dt></li>
+        <dd>대구광역시 달성군 다사읍 죽곡리에 조성된 문화관이자 미술관이다. 고래처럼 생긴 건축물이다. 정식명칭은 "디아크 문화관"이다. 4대강 사업의 일환으로 강정고령보와 함께 건설되었으며 2012년 9월 20일 개관하였다. </dd>
+        <li><dt><b>더현대 대구</b></dt></li>
+        <dd>대구광역시 중구 반월당역에 위치한 현대백화점의 플래그십 스토어. 2011년 8월 19일에 개점했으며, 영업 면적 56,099.1736㎡(16,970평)으로 현대백화점 점포들 중에서 5번째로 큰 규모이다.</dd>
+    </dl>
+    </ol>
+    <table>
+        <tr>
+            <th scope="col">여행상품</th>
+            <th scope="col">시간</th>
+            <th scope="col">일정</th>
+        </tr>
+        <tr>
+            <td rowspan="5">단일상품</td>
+            <td>9:00 ~ 11:00</td>
+            <td>83타워</td>
+        </tr>
+        <tr>
+            <td>11:30 ~ 13:30</td>
+            <td>김광석 다시그리기길</td>
+        </tr>
+        <tr>
+            <td>14:00 ~ 16:00</td>
+            <td>송해공원</td>
+        </tr>
+        <tr>
+            <td>16:30 ~ 18:30</td>
+            <td>디아크박물관</td>
+        </tr>
+        <tr>
+            <td>19:00 ~ 21:00</td>
+            <td>더현대 대구</td>
+        </tr>
+    </table>
+    <img src="images/83타워.jpeg">
+    <p>83타워</p>
+    <img src="images/김광석%20다시그리기길.jpeg">
+    <p>김광석 다시그리기길</p>
+    <img src="images/송해공원.jpeg">
+    <p>송해공원</p>
+    <img src="images/디아크문화관.webp">
+    <p>디아크문화관</p>
+    <img src="images/더현대%20대구.webp">
+    <p>더현대 대구</p>
+    <hr>
+
+    <label for="date">
+        예약 날짜를 선택하세요:
+        <input type="date"
+        id="date"
+        max="2024-12-31"
+        min="2024-04-22">
+    </label>
+    <form>
+        예약자 이름: <input type="text" name="username" required>
+        <input type="submit">
+    </form>
+    <form>
+        예약자 전화번호: <input type="text" name="username" required>
+        <input type="submit">
+    </form>
+    <select name="예약인원">
+        <option value="">예약인원</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+    </select>
+    <p>기타 요청사항</p>
+    <p><textarea cols="50" rows="10"></textarea></p>
+    <p><input type="submit" value="제출"></p>
+    <p>결제수단</p>
+    <select name="결제수단">
+        <option value="신용카드">신용카드</option>
+        <option value="현금 현장결제">현금 현장결제</option>
+        <option value="계좌이체">계좌이체</option>
+    </select>
+    <p></p>
+    <button>예약하기</button>
+    <button>취소하기</button>
+</body>
+</html>

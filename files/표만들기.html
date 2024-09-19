@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시간표</title>
+</head>
+<body>
+    <table border="1">
+        <caption>시간표</caption>
+        <thead>
+    <tr>
+        <th>교시</th>
+        <th>월</th>
+        <th>화</th>
+        <th>수</th>
+        <th>목</th>
+        <th>금</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <th>1교시</th>
+        <td>자율</td>
+        <td>국어</td>
+        <td>영어</td>
+        <td>진로</td>
+        <td>음악</td>
+    </tr>
+
+    <tr>
+        <th>2교시</th>
+        <td rowspan="2">프밍</td>
+        <td>영어</td>
+        <td>수학</td>
+        <td rowspan="2">웹기</td>
+        <td>수학</td>
+    </tr>
+
+    <tr>
+        <th>3교시</th>
+        <td rowspan="2">프밍</td>
+        <td rowspan="2">웹기</td>
+        <td>과학</td>
+    </tr>
+    
+    <tr>
+        <th>4교시</th>
+        <td>사회</td>
+        <td>수학</td>
+        <td>프밍</td>
+    </tr>
+
+    <tr>
+    <td></td>
+    <td colspan="5">점심시간</td>
+    </tr>
+  
+    </tbody>
+    </table>
+
+</body>
+</html>
+
+<!--
+    표의 시작과 끝을 알리는 <table>
+    표에 제목을 붙이고 싶다면 <caption>
+
+        행과 셀의 갯수를 지정해 주어야 표가 생성됨.
+        <tr> : 행
+        <td> : 행 안에 있는 셀(데이터)
+        <th> : 표의 제목 행에 셀을 만들 때 (table heading)
+               진하게, 셀 안에서 중앙배열
+-->
+
+<!--
+    표의 구조를 지정하는 <thead> <tbody> <tfoot>
+        table head : 제목
+        table body : 본문ㄴ
+        table foot : 요약
+
+    웹 브라우저 화면에서 보이지는 않지만, 화면낭독기나 자바스크립트에서 읽을 수 있다.
+-->
+
+<!--
+    행, 열을 합치는 rowspan, colspan
+-->

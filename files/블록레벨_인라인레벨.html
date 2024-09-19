@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid #000;
+            margin-bottom: 20px;
+        }
+        .box1{
+            width: 400px;
+            height: 100px;
+            box-shadow: 2px -2px 5px 0px;
+            border: 2px double black;
+        }
+        .box2{
+            width: 70%;
+            height: 100px;
+            box-shadow: 5px 5px 15px 5px violet inset;
+        }
+        .content-box{
+            width: 200px;
+            height: 100px;
+            border: 10px solid blue;
+            padding: 20px;
+            background-color: lightgray;
+            box-sizing: content-box;
+            margin-bottom: 20px;
+        }
+        .border-box{
+            width: 200px;
+            height: 100px;
+            border: 10px solid blue;
+            padding: 20px;
+            background-color: lightgray;
+            box-sizing: border-box;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+            box-shadow: 5px 5px 15px 5px black;
+            border-radius: 100%;
+    
+        }
+
+    </style>
+</head>
+<body>
+    <img src="tangerines.jpg">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="content-box">content-box</div>
+    <div class="border-box">border-box</div>
+</body>
+</html>

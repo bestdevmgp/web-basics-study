@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>트랜스폼</title>
+    <style>
+        .out{
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            border: 1px solid black;
+            perspective: 300px;
+        }
+        .in1{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+        }
+        .in1:hover{
+            transform: translate(50px, 60px);
+            transform: scale(2, 0.5);
+            transform: rotate(40deg);
+            transform: skew(30deg);
+        }
+        .in2{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+        }
+        .in2:hover{
+            transform: rotateX(50deg);
+        }
+        .in3{
+            width: 100px;
+            height: 100px;
+            background: yellow;
+        }
+        .in3:hover{
+            transform: translateY(-100px) scaleX(1.5) rotate(40deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="out">
+        <div class="in1"></div>
+    </div>
+    <div class="out">
+        <div class="in2"></div>
+    </div>
+    <div class="out">
+        <div class="in3"></div>
+    </div>
+</body>
+</html>

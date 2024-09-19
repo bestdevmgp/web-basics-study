@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!-- saved from url=(0163)http://localhost:63342/%EC%9B%B9%EA%B8%B0/%EB%B0%95%EC%8A%A4%EB%AA%A8%EB%8D%B8_%EC%A0%95%EB%A6%AC(2).html?_ijt=jut1iggjifciess5u78j8cmttg&_ij_reload=RELOAD_ON_SAVE -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1{
+            border: dotted;
+            height: 200px;
+            text-align: center;
+        }
+        .side{
+            border: dotted;
+            float: left;
+            width: 30%;
+            height: 600px;
+        }
+        .contents{
+            border: dotted;
+            height: 600px;
+            width: 70%;
+        }
+        .right{
+            border: dotted;
+            float: right;
+            width: 30%;
+            height: 600px;
+        }
+        .footer{
+            border: dotted;
+            height: 200px;
+            clear: left;
+        }
+        nav{
+            margin: 20px auto;
+            width: 1200px;
+        }
+        li{
+            text-align: center;
+            list-style: none;
+            width: 80px;
+            height: 40px;
+            padding-top: 20px;
+            display: inline-block;
+            margin: auto;
+        }
+        .search{
+            width: 500px;
+            height: 50px;
+            text-align: center;
+            border-radius: 30px;
+            border: 3px solid rgb(55, 192, 55);
+            margin: 20px auto;
+            position: relative;
+        }
+        .logo{
+            position: absolute;
+            color: rgb(55, 192, 55);
+            font-size: 30px;
+            font-weight: 900;
+            top: 7px;
+            left: 10px;
+        }
+        input{
+            width: 80%;
+            height: 100%;
+            border-radius: 30px;
+            border: none;
+            margin-left: 40px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div class="box1">
+    <nav>
+        <div class="search">
+            <span class="logo">
+                N
+            </span>
+            <input type="search" placeholder="검색어를 입력하세요">
+        </div>
+        <ul>
+            <li><a href="http://www.naver.com/">메일</a></li>
+            <li><a href="http://www.google.com/">카페</a></li>
+            <li><a href="https://chat.openai.com/">블로그</a></li>
+            <li><a href="https://www.youtube.com/">쇼핑</a></li>
+        </ul>
+    </nav>
+</div>
+<div class="side">sidebar</div>
+<div class="right">right sidebar</div>
+<div class="contents">contents</div>
+<div class="footer">footer</div>
+
+<script>
+(function() {
+  var ws = new WebSocket('ws://' + window.location.host + 
+             '/jb-server-page?reloadMode=RELOAD_ON_SAVE&'+
+             'referrer=' + encodeURIComponent(window.location.pathname));
+  ws.onmessage = function (msg) {
+      if (msg.data === 'reload') {
+          window.location.reload();
+      }
+      if (msg.data.startsWith('update-css ')) {
+          var messageId = msg.data.substring(11);
+          var links = document.getElementsByTagName('link');
+          for (var i = 0; i < links.length; i++) {
+              var link = links[i];
+              if (link.rel !== 'stylesheet') continue;
+              var clonedLink = link.cloneNode(true);
+              var newHref = link.href.replace(/(&|\?)jbUpdateLinksId=\d+/, "$1jbUpdateLinksId=" + messageId);
+              if (newHref !== link.href) {
+                clonedLink.href = newHref;
+              }
+              else {
+                var indexOfQuest = newHref.indexOf('?');
+                if (indexOfQuest >= 0) {
+                  // to support ?foo#hash 
+                  clonedLink.href = newHref.substring(0, indexOfQuest + 1) + 'jbUpdateLinksId=' + messageId + '&' + 
+                                    newHref.substring(indexOfQuest + 1);
+                }
+                else {
+                  clonedLink.href += '?' + 'jbUpdateLinksId=' + messageId;
+                }
+              }
+              link.replaceWith(clonedLink);
+          }
+      }
+  };
+})();
+</script></body></html>

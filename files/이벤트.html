@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 이벤트</title>
+    <style>
+        li{
+            display: inline-block;
+            border: 1px solid;
+            width: 200px;
+            height: 60px;
+        }
+
+        ul{
+            list-style: none;
+            width: 500px;
+            margin: 10px auto;
+            padding: 0;
+        }
+
+        li{
+            display: inline-block;
+            width: 120px;
+            border: 1px solid lightgray;
+            padding-inline: 10px 15px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        #result{
+            border: 1px solid;
+            width: 600px;
+            height: 400px;
+            justify-content: center;
+            border-radius: 20px;
+        }
+
+        .mom{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="#" onclick="changeBg('green')">green</a></li>          <!-- 클릭했을 때 -->
+        <li><a href="#" onmouseover="changeBg('orange')">orange</a></li>    <!-- 마우스를 올렸을 때 -->
+        <li><a href="#" ondblclick="changeBg('purple')">purple</a></li>     <!-- 더블클릭했을 때 -->
+    </ul>
+    <div class="mom">
+        <div id="result"></div>
+    </div>
+    <button id="bu">글자색 변경하기</button>
+    <p>textarea</p>
+
+    <script>
+        //querySelector: 웹 요소를 가져오는 방법 중 하나, () 안에는 클래스, id, 선택자 등a
+        let changeBg = color => {
+            let result = document.querySelector("#result");
+            result.style.background = color;
+        };
+
+        document.querySelector("#bu").onclick=function(){
+            document.querySelector("p").style.color='blue'
+        };
+    </script>
+</body>
+</html>

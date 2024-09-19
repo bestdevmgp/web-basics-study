@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>상품정보</legend>
+            <label>상품명<input></label>
+
+            <label for="num">수량</label>
+            <input id="num">
+        </fieldset>
+        <fieldset>
+            <legend>주문정보</legend>
+            <textarea row="4" cols="50"></textarea>
+            <select size="2" multiple>
+                <option value="op1">선택1</option>
+                <option>선택2</option>
+                <option selected>선택3</option>
+            </select>
+
+            <input type="text" list="datalist">
+            <datalist id="datalist">
+                <option>옵션1</option>
+                <option>옵션2</option>
+                <option>옵션3</option>
+            </datalist>
+
+            <button type="reset">전송하기</button>
+        </fieldset>
+    </form>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            font-size: 30pt;
+            text-align: center;
+        }
+        .header{
+            background-color: skyblue;
+            height: 50px;
+        }
+        .lsidebar{
+            background-color: greenyellow;
+            float: left;
+            height: 600px;
+            width: 200px;
+        }
+        .contents{
+            background-color: green;
+            height: 600px;
+        }
+        .rsidebar{
+            background-color: violet;
+            float: right;
+            height: 600px;
+            width: 200px;
+        }
+        .footer{
+            clear: left;
+            background-color: yellow;
+        }
+        #container{
+            width: 1200px;
+            margin: 20px auto;
+        }
+        li{
+            list-style: none;
+            display: inline;
+        }
+        a:link{/*방문하지 않은 링크*/
+            color: black;
+            text-decoration: none;
+        }
+        a:visited{/*방문한적 있는 링크*/
+            color: blue;
+            text-decoration: underline;
+        }
+        a:hover{/*마우스를 올려두었을 때*/
+            color: orange;
+            text-decoration:underline;
+        }
+        a:active{/*클릭하고 뗄 때까지*/
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+<div id="container">
+    <div class="header">
+        <ul>
+            <li><a href="https://www.google.com">menu1</a></li>
+            <li><a href="https://www.naver.com">menu2</a></li>
+            <li><a href="https://dodam.b1nd.com">menu3</a></li>
+            <li><a href="https://dgsw.dge.hs.kr/dgswh/main.do">menu4</a></li>
+        </ul>
+    </div>
+    <div class="lsidebar">left sidebar</div>
+    <div class="rsidebar">right sidebar</div>
+    <div class="contents">contents</div>
+    <div class="footer">footer</div>
+</div>
+</nav>
+</body>
+</html>

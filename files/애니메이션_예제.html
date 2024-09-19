@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 100px;
+            height: 100px;
+            animation:color 1.5s infinite alternate, rotate 1.5s infinite;/*두개의 애니메이션을 동시에 적용*/
+        }
+        @keyframes color{/*alternate: 진행방향 지정(홀수번째:nomal, 짝수번쨰: reverse)-> 빨강, 파랑, 초록, 파랑, 빨강 순서로 반복됨*/
+            from{background: red;}
+            50%{background:blue;}
+            to{background:green;}
+        }
+        @keyframes rotate{/*0도 -> x축 180도 회전 -> y축 180도 회전*/
+            from{transform: perspective(200px) rotateX(0deg) rotateY(0deg);}
+            50%{transform: perspective(200px) rotateX(-180deg) rotateY(0deg);}
+            to{transform: perspective(200px) rotateX(-180deg) rotateY(-180deg);}
+        }
+    </style>
+</head>
+<body>
+<div class="box"></div>
+</body>
+</html>

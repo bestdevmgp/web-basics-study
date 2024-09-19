@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FlexBox</title>
+    <style>
+        body{
+            background: lightgray;
+        }
+        .container{
+            border: 1px solid black;
+            margin: 10px;
+            width: 300px;
+            height: 200px;
+            display: flex;
+        }
+        .box{
+            background: white;
+            width: 80px;
+            text-align: center;
+            font-size: 20px;
+        }
+        #op1{
+            flex-direction: row;  /*주축과 가로축을 바꾸어줌*/
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #self{
+            align-self: flex-start;
+        }
+        #op2{
+            flex-flow: row nowrap;
+            justify-content: space-around;
+            align-items: baseline;
+        }
+        #op3{
+            /*flex-direction, flex-wrap을 한번에!?*/
+            flex-flow: row nowrap;
+            justify-content: space-evenly;
+            align-items: stretch;
+        }
+        #op4{
+            flex-flow: row wrap;
+            align-content: space-around;
+        }
+        #op5{
+            flex-flow: row wrap;
+        }
+        #op6{
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #op7{
+            flex-flow: row nowrap;
+        }
+        #self{
+            align-self: flex-start;
+        }
+        #self2{
+            align-self: flex-end;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="op1">
+        <div class="box" id="self">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <div class="container" id="op2">
+        <div style="font-size: 30pt" class="box">1</div>
+        <div style="font-size: 40pt" class="box">2</div>
+        <div style="font-size: 20pt" class="box">3</div>
+        <div style="font-size: 50pt" class="box">4</div>
+    </div>
+    <div class="container" id="op3">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <div class="container" id="op4">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <div class="container" id="op5">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <div class="container" id="op6">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+    <div class="container" id="op7">
+        <div id="self" class="box">1</div>
+        <div id="self2" class="box">2</div>
+        <div id="self" class="box">3</div>
+        <div id="self2" class="box">4</div>
+    </div>
+</body>
+</html>
